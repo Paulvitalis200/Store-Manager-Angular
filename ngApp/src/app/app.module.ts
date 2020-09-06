@@ -16,6 +16,7 @@ import { ProductsService } from './products.service';
 import { AuthGuard } from './auth.guard';
 import { TokenInterceptorService } from './token-interceptor.service';
 import { CreateproductComponent } from './createproduct/createproduct.component';
+import { SalesComponent } from './sales/sales.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { CreateproductComponent } from './createproduct/createproduct.component'
     EmployeesComponent,
     NavbarComponent,
     CreateproductComponent,
+    SalesComponent,
   ],
   imports: [
     BrowserModule,

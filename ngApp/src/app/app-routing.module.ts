@@ -7,6 +7,7 @@ import { RegisterComponent } from './register/register.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { AuthGuard } from './auth.guard';
 import { CreateproductComponent } from './createproduct/createproduct.component';
+import { SalesComponent } from './sales/sales.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,11 @@ const routes: Routes = [
   {
     path: 'create',
     component: CreateproductComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path:  'sales',
+    component: SalesComponent,
     canActivate: [AuthGuard]
   }
 ];
