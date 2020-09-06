@@ -12,6 +12,7 @@ import { ProductsComponent } from './products/products.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AuthService } from './auth.service';
+import { ProductsService } from './products.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { AuthService } from './auth.service';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
