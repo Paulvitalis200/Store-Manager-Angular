@@ -1,18 +1,29 @@
 <div>
     <app-navbar></app-navbar>
-    <div>
+    <div class='register-form-section'>
+        <h2 class='account-title'>ADD EMPLOYEE</h2>
        <form>
-           <div>
-               <label for="">Username</label>
-               <input [(ngModel)]="registerUserData.username" name="username" type="text" required/>
-               <label>Email</label>
-               <input [(ngModel)]="registerUserData.email" name="email"  type="text" required/>
-               <label>Password</label>
-               <input [(ngModel)]="registerUserData.password" name="password" type="password" required/>
-               <label >Role</label>
-               <input [(ngModel)]="registerUserData.role" name="role" type="role" required/>
-           </div>
-           <button (click)="registerUser()" type="button">Register</button>
+            <div class='register-form-container'>
+                <label class='register-label'>Username</label>
+                <input [(ngModel)]="registerUserData.username" class='register-input' type='text' name='username' />
+              </div>
+              <div class='register-form-container'>
+                <label class='register-label'>Email</label>
+                <input [(ngModel)]="registerUserData.email" class='register-input' type='text' name='email' />
+              </div>
+              <div class='register-form-container'>
+                <label class='register-label'>Password</label>
+                <input [(ngModel)]="registerUserData.password" class='register-input' type='text' name='password' />
+              </div>
+              <div class='register-form-container'>
+                <label class='register-label'>Role</label>
+                <input [(ngModel)]="registerUserData.role" class='register-input' type='text' name='role' />
+              </div>
+           <button class="register-btn" (click)="registerUser()" type="button">Register</button>
        </form>
+       
     </div>
+    <div class='back-button'>
+        <button (click)="backClicked()" class='product-btn-back'>Back to Dashboard</button>
+      </div>
 </div>
