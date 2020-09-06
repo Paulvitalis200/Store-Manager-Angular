@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule }  from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -7,6 +8,8 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
 import { ProductsComponent } from './products/products.component';
+import { EmployeesComponent } from './employees/employees.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -14,10 +17,13 @@ import { ProductsComponent } from './products/products.component';
     LoginComponent,
     DashboardComponent,
     RegisterComponent,
-    ProductsComponent
+    ProductsComponent,
+    EmployeesComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

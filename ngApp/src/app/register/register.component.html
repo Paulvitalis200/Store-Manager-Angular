@@ -1,1 +1,18 @@
-<p>register works!</p>
+<div>
+    <app-navbar></app-navbar>
+    <div>
+       <form>
+           <div>
+               <label for="">Username</label>
+               <input [(ngModel)]="registerUserData.username" name="username" type="text" required/>
+               <label>Email</label>
+               <input [(ngModel)]="registerUserData.email" name="email"  type="text" required/>
+               <label>Password</label>
+               <input [(ngModel)]="registerUserData.password" name="password" type="password" required/>
+               <label >Role</label>
+               <input [(ngModel)]="registerUserData.role" name="role" type="role" required/>
+           </div>
+           <button (click)="registerUser()" type="button">Register</button>
+       </form>
+    </div>
+</div>
