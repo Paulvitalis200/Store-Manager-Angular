@@ -17,7 +17,10 @@ export class ProductsComponent implements OnInit {
   ngOnInit(): void {
     this._productsService.getProducts()
     .subscribe(
-      res => this.products = res.Products,
+      res => {
+        this.products = res.Products
+        console.log(this.products)
+       },
       err => {
         if(err instanceof HttpErrorResponse) {
           if (err.status === 401  || err.status === 422){
