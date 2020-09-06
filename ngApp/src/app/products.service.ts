@@ -13,4 +13,8 @@ export class ProductsService {
     return this.http.get<any>(this._productsUrl)
     // returns the data as an observable. We need to subscribe to them in the components
   }
+
+  addProduct(product) {
+    return this.http.post<any>(this._productsUrl, product)
+  }
 }
