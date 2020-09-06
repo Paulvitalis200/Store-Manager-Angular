@@ -7,13 +7,13 @@
       <form>
         <div class='email-container'>
           <label class='login-label'>Email</label>
-          <input class='login-input' type='text' name='email' />
+          <input [(ngModel)]="loginUserData.email"  class='login-input' type='text' name='email' />
         </div>
         <div class='email-container'>
           <label class='login-label'>Password</label>
-          <input class='login-input' type='password' name='password'/>
+          <input [(ngModel)]="loginUserData.password" class='login-input' type='password' name='password'/>
         </div>
-              <button class='login-btn'>
+              <button (click)="loginUser()" class='login-btn'>
                     Log in
               </button>
       </form>
