@@ -1,0 +1,33 @@
+<div>
+    <app-navbar></app-navbar>
+    <div class='product-form-section'>
+        <h2 class='account-title'>ADD A PRODUCT</h2>
+        <form>
+          <div class='product-form-container'>
+            <label class='product-label'>Product name</label>
+            <input [(ngModel)]="productData.name" class='product-input' type='text' name='name' />
+          </div>
+          <div class='product-form-container'>
+            <label class='product-label'>Inventory</label>
+            <input [(ngModel)]="productData.inventory"class='product-input' type='text' name='inventory'/>
+          </div>
+          <div class='product-form-container'>
+            <label class='product-label'>Price</label>
+            <input [(ngModel)]="productData.price" class='product-input' type='text' name='price'/>
+          </div>
+          <div class='product-form-container'>
+            <label class='product-label'>Minimum Stock</label>
+            <input [(ngModel)]="productData.minimum_stock" class='product-input' type='text' name='minimum_stock'/>
+          </div>
+          <div class='product-form-container'>
+            <label class='product-label'>Category</label>
+            <input [(ngModel)]="productData.category" class='product-input' type='text' name='category'/>
+          </div>
+          <button class='product-btn' (click)="addProduct()">Add</button>
+        </form>
+      </div>
+      <div class='back-button'>
+        <button (click)="backClicked()" class='product-btn-back'>Back to Dashboard</button>
+      </div>
+      
+</div>

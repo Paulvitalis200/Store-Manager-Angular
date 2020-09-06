@@ -1,0 +1,66 @@
+.product-form-section {
+    text-align: center;
+    background: #fff;
+    box-shadow: 3px 3px 10px 2px #d8d8d8;
+    width: 70%;
+    margin: 40px auto 0 auto;
+    padding: 20px 30px 20px 30px;
+    background: #ececec;
+    border-radius: 5px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.account-title {
+    margin-top: 0;
+}
+
+.product-input {
+    border: 0;
+    font-size: 13px;
+    height: 25px;
+    margin-bottom: 20px;
+    padding-top: 4px;
+  }
+
+.product-form-container  {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-btn {
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    background: #000;
+    border: 0;
+    color: #fff;
+    border-radius: 3px;
+    padding: 5px 25px 5px 25px;
+}
+
+.product-btn-back {
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid #000;
+    color: #000;
+    border-radius: 3px;
+    padding: 5px 25px 5px 25px;
+}
+
+.product-btn-back:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.back-button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+    .product-form-section {
+      width: 20%;
+    }
+  }
