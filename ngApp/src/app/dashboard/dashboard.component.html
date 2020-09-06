@@ -1,15 +1,15 @@
 <div>
     <app-navbar></app-navbar>
-    <div>
-        <div>
-            <p>Username</p>
+    <div class="dashboard">
+        <div class="dashboard-section">
+            <p>Username: {{username}}</p>
+            <p>Role: {{role}}</p>
         </div>
-        <div>
+        <div class="dashboard-section">
             <p>Create Product</p>
             <p>Modify/Delete Product</p>
         </div>
-        <div>
-         
+        <div  class="dashboard-section">
             <p>
                 <a routerLink="/register" routerLinkActive="active">Sign Up Employee</a>
             </p>

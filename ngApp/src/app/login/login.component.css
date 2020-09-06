@@ -2,12 +2,17 @@
 LOGIN PAGE
 **************/
 
+.brand-name{
+  font-family: 'Anton', sans-serif;
+  padding: 10px 0;
+  font-weight: bold;
+  margin: 0;
+}
 .login-header{
     text-align: center;
-    font-family: 'Changa One', cursive;
     font-size: 1.3em;
-    background: #ff6781;
-    /* padding: 1px 0; */
+    background-color: #3fe0d0;
+    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, .2);
     color: #fff;
 }
 
@@ -20,8 +25,7 @@ LOGIN PAGE
     padding: 10px 30px 50px;
     background: #ececec;
     border-radius: 5px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+    font-family: 'Maven Pro', sans-serif;
 }
 
 .login-input {
@@ -38,7 +42,7 @@ LOGIN PAGE
 }
 
 .account-title {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Maven Pro', sans-serif;
     font-weight: 300;
     font-size: 30px;
 }
@@ -48,7 +52,7 @@ LOGIN PAGE
 }
 
 .login-btn {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Maven Pro', sans-serif;
     font-weight: 300;
     font-size: 16px;
     background: #000;
