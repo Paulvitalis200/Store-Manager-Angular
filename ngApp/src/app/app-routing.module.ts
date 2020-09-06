@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { EmployeesComponent } from './employees/employees.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {
@@ -14,11 +15,13 @@ const routes: Routes = [
   },
   {
     path: 'products',
-    component: ProductsComponent
+    component: ProductsComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'dashboard',
-    component: DashboardComponent
+    component: DashboardComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'login',
@@ -26,11 +29,13 @@ const routes: Routes = [
   },
   {
     path: 'register',
-    component: RegisterComponent
+    component: RegisterComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'employees',
-    component: EmployeesComponent
+    component: EmployeesComponent,
+    canActivate: [AuthGuard]
   }
 ];
 
