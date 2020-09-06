@@ -6,6 +6,7 @@ nav {
    background-color: #3fe0d0;
    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, .2);
    justify-content: space-between;
+   align-items: center;
 }
 
 .storemanager-title {
@@ -27,7 +28,7 @@ a:active {
 
 .nav-items {
     display: flex;
-    padding-top: 10px;
+    /* padding-top: 15px; */
 }
 
 li {
@@ -35,5 +36,5 @@ li {
     padding-left: 10px;
     padding-right: 10px;
     font-family: 'Maven Pro', sans-serif;
-    font-size: 30px;
+    font-size: 25px;
 }

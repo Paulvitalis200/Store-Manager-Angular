@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { AuthGuard } from './auth.guard';
+import { CreateproductComponent } from './createproduct/createproduct.component';
 
 const routes: Routes = [
   {
@@ -35,6 +36,11 @@ const routes: Routes = [
   {
     path: 'employees',
     component: EmployeesComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'create',
+    component: CreateproductComponent,
     canActivate: [AuthGuard]
   }
 ];
