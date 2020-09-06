@@ -9,5 +9,8 @@
         <a routerLink="/employees" routerLinkActive="active">Employees</a></li>
     <li>
         <a routerLink="/products" routerLinkActive="active">Products</a></li>
+        <li>
+            <button (click)="_authService.logoutUser()">Logout</button>
+            <!-- <a routerLinkActive="active" (click)="_authService.logoutUser()">Logout</a></li> -->
 </ul>
 </nav>
