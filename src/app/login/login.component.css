@@ -75,7 +75,7 @@ LOGIN PAGE
   background: #d1d4da; 
 }
 
-.custom-spinner {
+:host ::ng-deep .custom-spinner circle{
   stroke: #fff;
 }
 
