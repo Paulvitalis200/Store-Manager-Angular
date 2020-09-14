@@ -1,13 +1,15 @@
 # Store-Manager
+Store Manager is an app that helps store owners manage sales and product inventory records. 
+This application is for use by a store attendant and store owner.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
 
 ## Development server
 
+Ensure you have `node` and `npm` installed.
+Clone the repo and install all dependencies using `npm install`.
+Checkout to  the `develop`  branch.
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-Store Manager is an app that helps store owners manage sales and product inventory records. 
-This application is for use by a store attendant and store owner.
 
 Login credentials:
 `email: vitalispaul48@live.com`
@@ -27,7 +29,7 @@ This repo uses the Store Manager API as its backend
 7. Store Owner and store attendant can view all the sales records
 
 # Using the application
-1. Navigate to the site using the following url: https://paulstar200.github.io/Store-Manager/UI/index.html
+1. Navigate to the site using the following url: https://storemanager-angular.herokuapp.com/
 2. Login as the Admin using the following email and password.
 `email: vitalispaul48@live.com`
 `password: manu2012`
