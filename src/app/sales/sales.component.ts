@@ -10,15 +10,25 @@ import { Location } from '@angular/common';
   styleUrls: ['./sales.component.css']
 })
 export class SalesComponent implements OnInit {
-
+  isLoading: boolean = false;
+  errorMessage: string = '';
   sales = []
   constructor(private _salesService: SalesService, private _location: Location, private  _router: Router) { }
 
   ngOnInit(): void {
+    this.isLoading = true
     this._salesService.getSales()
     .subscribe(
-      res => this.sales = res.Sales,
-      err => console.log(err)
+      res => {
+        this.isLoading = false
+        this.sales = res.Sales
+        console.log(this.sales)
+      },
+      err => {
+        this.isLoading = false;
+        this.errorMessage = err;
+        console.log(err)
+      }
     )
   }
 
