@@ -1,0 +1,20 @@
+.product-btn-back {
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid #000;
+    color: #000;
+    border-radius: 3px;
+    padding: 5px 25px 5px 25px;
+}
+
+.product-btn-back:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.back-button {
+    text-align: center;
+    margin-top: 40px;
+}

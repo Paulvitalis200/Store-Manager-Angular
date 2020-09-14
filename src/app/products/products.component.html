@@ -1,0 +1,12 @@
+
+<div>
+    <app-navbar></app-navbar>
+    <div class="products-container" >
+        <div class="product" *ngFor="let product of products">
+            <img src="../../assets/images/placeholder.svg" alt="Placeholder" />
+            <p>{{product.name}}</p>
+            <p>{{product.price}}</p>
+            <p>{{product.category}}</p>
+        </div>
+    </div> 
+</div>

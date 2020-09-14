@@ -1,0 +1,25 @@
+<div>
+    <app-navbar></app-navbar>
+    <div *ngIf="isLoading" class="sales-spinner-div">
+        <mat-spinner class="sales-spinner" diameter="150"></mat-spinner>
+    </div>
+    <div class="sales-table" *ngIf="!isLoading">
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Sold By</th>
+            </tr>
+            <tr *ngFor="let sale of sales">
+                <td>{{ sale.product_name}}  </td>
+                <td>{{ sale.price }}</td>
+                <td>{{ sale.quantity }}</td>
+                <td>{{ sale.attendant_name }}</td>
+            </tr>
+            </table>
+    </div>
+    <div class='back-button'>
+        <button (click)="backClicked()" class='sales-btn-back'>Back to Dashboard</button>
+      </div>
+</div>

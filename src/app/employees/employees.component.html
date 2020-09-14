@@ -1,0 +1,9 @@
+<div>
+    <app-navbar></app-navbar>
+    <div *ngFor="let employee of employees">
+        {{employee.username}}
+    </div>
+    <div class='back-button'>
+        <button (click)="backClicked()" class='product-btn-back'>Back to Dashboard</button>
+      </div>
+</div>

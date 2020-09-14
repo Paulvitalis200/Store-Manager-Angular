@@ -1,0 +1,91 @@
+/**************
+LOGIN PAGE
+**************/
+
+.brand-name{
+  font-family: 'Anton', sans-serif;
+  padding: 10px 0;
+  font-weight: bold;
+  margin: 0;
+}
+.login-header{
+    text-align: center;
+    font-size: 1.3em;
+    background-color: #3fe0d0;
+    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, .2);
+    color: #fff;
+}
+
+.account-section {
+    text-align: center;
+    background: #fff;
+    box-shadow: 3px 3px 10px 2px #d8d8d8;
+    width: 70%;
+    margin: 40px auto 0 auto;
+    padding: 10px 30px 50px;
+    background: #ececec;
+    border-radius: 5px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.login-input {
+  border: 0;
+  font-size: 13px;
+  height: 25px;
+  margin-bottom: 20px;
+  padding-top: 4px;
+}
+
+.email-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.account-title {
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+.login-label {
+    margin-bottom: 10px;
+}
+
+.login-btn {
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    background: #000;
+    border: 0;
+    color: #fff;
+    border-radius: 3px;
+    padding: 10px 15px 10px 15px;
+}
+
+.login-error {
+    color: #fff;
+    background: #f15c5c;
+    padding: 5px 10px;
+    width: 80%;
+    margin: 0 auto 10px auto;
+    border-radius: 4px;
+}
+
+.login-btn:disabled {
+  background: #d1d4da; 
+}
+
+:host ::ng-deep .custom-spinner circle{
+  stroke: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  .account-section {
+    width: 20%;
+  }
+
+  .login-btn {
+    padding: 8px 20px 8px 20px;
+  }
+}
+

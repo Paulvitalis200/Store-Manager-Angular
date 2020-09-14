@@ -1,0 +1,23 @@
+.dashboard {
+    width: 55%;
+    margin: 150px auto 10px auto;
+    
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 20px;
+}
+
+.dashboard-section {
+    padding: 50px;
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, .2);
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color:  #0961a8;
+}

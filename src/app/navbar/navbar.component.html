@@ -1,0 +1,19 @@
+<nav>
+    <a class="storemanager-title" routerLink="/dashboard">STORE<br>MANAGER</a>
+    <ul  class="nav-items">
+        <li>
+            <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a> 
+        </li>
+        <li>
+            <a routerLink="/employees" routerLinkActive="active">Employees</a>
+        </li>
+        <li>
+            <a routerLink="/products" routerLinkActive="active">Products</a>
+        </li>
+        <li>
+            <a class="logout-btn" (click)="_authService.logoutUser()">Logout</a>
+        </li>
+        <!-- <button class="logout-btn" (click)="_authService.logoutUser()">Logout</button> -->
+                <!-- <a routerLinkActive="active" (click)="_authService.logoutUser()">Logout</a></li> -->
+    </ul>
+</nav>

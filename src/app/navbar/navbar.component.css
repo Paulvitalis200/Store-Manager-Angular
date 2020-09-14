@@ -1,0 +1,40 @@
+nav {
+   display: flex;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   padding-left: 20px;
+   background-color: #3fe0d0;
+   box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, .2);
+   justify-content: space-between;
+   align-items: center;
+}
+
+.storemanager-title {
+    color: #fff;
+    font-family: 'Changa One', cursive;
+    font-size: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover,
+a:active {
+    color: #4682B4;
+}
+
+
+.nav-items {
+    display: flex;
+    /* padding-top: 15px; */
+}
+
+li {
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 25px;
+}
