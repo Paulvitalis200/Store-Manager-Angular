@@ -17,6 +17,8 @@ import { AuthGuard } from './auth.guard';
 import { TokenInterceptorService } from './token-interceptor.service';
 import { CreateproductComponent } from './createproduct/createproduct.component';
 import { SalesComponent } from './sales/sales.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { SalesComponent } from './sales/sales.component';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatProgressSpinnerModule,
   ],
   providers: [AuthService, AuthGuard, ProductsService,
   {
