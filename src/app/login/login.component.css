@@ -59,68 +59,33 @@ LOGIN PAGE
     border: 0;
     color: #fff;
     border-radius: 3px;
-    padding: 5px 25px 5px 25px;
+    padding: 10px 15px 10px 15px;
 }
 
-.login-btn-disabled {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    background:#c5c5c5;
-    border: 0;
+.login-error {
     color: #fff;
-    border-radius: 3px;
-    padding: 5px 25px 5px 25px;
+    background: #f15c5c;
+    padding: 5px 10px;
+    width: 80%;
+    margin: 0 auto 10px auto;
+    border-radius: 4px;
 }
 
-#mini-loader{
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    margin: 0.2rem 0.5rem 0 0.5rem;
-    border: 3px solid rgba(255, 255, 255, .3);
-    border-radius: 50%;
-    border-top-color: #fff;
-    animation: spin 1s ease-in-out infinite;
-    -webkit-animation: spin 1s ease-in-out infinite;
-  }
-  
-  @keyframes spin {
-    to {
-      -webkit-transform: rotate(360deg);
-    }
-  }
-  
-  @-webkit-keyframes spin {
-    to {
-      -webkit-transform: rotate(360deg);
-    }
-  }
+.login-btn:disabled {
+  background: #d1d4da; 
+}
 
-  .error {
-      color: red;
-      background: #ffcccc;
-      padding: 5px 0 5px 0;
-      width: 80%;
-      margin: 0 auto;
-      border-radius: 3px;
-  }
-
-  .create-product-div {
-    text-align: center;
-    background: #fff;
-    box-shadow: 3px 3px 10px 2px #d8d8d8;
-    width: 70%;
-    margin: 40px auto 0 auto;
-    padding: 10px 30px 50px;
-    background: #ececec;
-    border-radius: 5px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-  }
+:host ::ng-deep .custom-spinner circle{
+  stroke: #fff;
+}
 
 @media only screen and (min-width: 768px) {
   .account-section {
     width: 20%;
   }
+
+  .login-btn {
+    padding: 8px 20px 8px 20px;
+  }
 }
+

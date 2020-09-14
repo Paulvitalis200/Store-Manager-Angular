@@ -1,0 +1,35 @@
+<div>
+    <app-navbar></app-navbar>
+    <div class='register-form-section'>
+        <h2 class='account-title'>ADD EMPLOYEE</h2>
+        <p class="register-user-error" *ngIf="errorMessage">
+          {{ errorMessage }}
+        </p>
+       <form>
+            <div class='register-form-container'>
+                <label class='register-label'>Username</label>
+                <input [(ngModel)]="registerUserData.username" (ngModelChange)="clearFormErrors()" class='register-input' type='text' name='username' />
+              </div>
+              <div class='register-form-container'>
+                <label class='register-label'>Email</label>
+                <input [(ngModel)]="registerUserData.email" (ngModelChange)="clearFormErrors()" class='register-input' type='text' name='email' />
+              </div>
+              <div class='register-form-container'>
+                <label class='register-label'>Password</label>
+                <input [(ngModel)]="registerUserData.password" (ngModelChange)="clearFormErrors()" class='register-input' type='text' name='password' />
+              </div>
+              <div class='register-form-container'>
+                <label class='register-label'>Role</label>
+                <input [(ngModel)]="registerUserData.role"(ngModelChange)="clearFormErrors()"  class='register-input' type='text' name='role' />
+              </div>
+           <button class="register-btn" (click)="registerUser()" type="button" [disabled]="!registerUserData.email || !registerUserData.password || !registerUserData.username || !registerUserData.role">
+             <span *ngIf="!isLoading">Register</span>
+             <mat-spinner class="custom-spinner" diameter="25" *ngIf="isLoading"></mat-spinner>
+           </button>
+       </form>
+       
+    </div>
+    <div class='back-button'>
+        <button (click)="backClicked()" class='product-btn-back'>Back to Dashboard</button>
+      </div>
+</div>

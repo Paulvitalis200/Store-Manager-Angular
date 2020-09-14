@@ -1,9 +1,4 @@
-.register-form-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.register-form-section {
+.product-form-section {
     text-align: center;
     background: #fff;
     box-shadow: 3px 3px 10px 2px #d8d8d8;
@@ -15,7 +10,11 @@
     font-family: 'Maven Pro', sans-serif;
 }
 
-.register-input {
+.account-title {
+    margin-top: 0;
+}
+
+.product-input {
     border: 0;
     font-size: 13px;
     height: 25px;
@@ -23,7 +22,12 @@
     padding-top: 4px;
   }
 
-  .register-btn {
+.product-form-container  {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-btn {
     font-family: 'Maven Pro', sans-serif;
     font-weight: 300;
     font-size: 16px;
@@ -55,8 +59,16 @@
     margin-top: 40px;
 }
 
+:host ::ng-deep .custom-spinner circle{
+    stroke: #fff;
+  }
+
+.product-btn:disabled {
+    background: #d1d4da; 
+}
+
 @media only screen and (min-width: 768px) {
-    .register-form-section {
+    .product-form-section {
       width: 20%;
     }
   }

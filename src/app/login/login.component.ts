@@ -9,6 +9,8 @@ import { AuthService } from '../auth.service';
 })
 export class LoginComponent implements OnInit {
 
+  isLoading: boolean = false;
+  errorMessage: string = '';
   loginUserData = {
     "email": "",
     "password": ""
@@ -19,7 +21,12 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  clearFormErrors() {
+    this.errorMessage = ''
+  }
+
   loginUser() {
+    this.isLoading = true
     this._auth.loginUser(this.loginUserData)
     .subscribe(
       res => {
@@ -27,9 +34,14 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('token', res.access_token)
         localStorage.setItem('role', res.role);
         localStorage.setItem('username', res.username);
+        this.isLoading = false;
         this._router.navigate(['/dashboard'])
       },
-      err => console.log('Error:', err)
+      err => {
+        this.isLoading = false
+        this.errorMessage = err.error.message
+        console.log('Error:', this.errorMessage)
+      }
     )
   }
 
