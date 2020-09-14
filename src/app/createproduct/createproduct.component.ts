@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./createproduct.component.css']
 })
 export class CreateproductComponent implements OnInit {
-
+  isLoading: boolean = false;
+  success: boolean = false;
   productData = {
     "name": "",
     "inventory": "",
@@ -22,16 +23,24 @@ export class CreateproductComponent implements OnInit {
               private _router: Router) { }
 
   ngOnInit(): void {
+    this.success = false;
   }
 
   addProduct() {
+    this.isLoading = true;
     this._productsService.addProduct(this.productData)
     .subscribe(res => {
+      this.isLoading = false
       console.log(res)
       console.log(this.productData)
+      this.success = true;
       this._router.navigate(['/products'])
     },
-    err => console.log(err))
+    err => {
+      this.isLoading = false;
+      this.success = false;
+      console.log(err)
+    })
   }
 
   backClicked() {

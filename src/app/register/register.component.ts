@@ -9,6 +9,8 @@ import { Location } from '@angular/common';
 })
 export class RegisterComponent implements OnInit {
 
+  isLoading: boolean = false;
+  errorMessage: string = '';
   registerUserData = {
     "username": "",
     "email": "",
@@ -21,11 +23,23 @@ export class RegisterComponent implements OnInit {
   }
 
   registerUser() {
+    this.isLoading = true;
     this._auth.registerUser(this.registerUserData)
     .subscribe(
-      res => console.log(res, this.registerUserData ),
-      err => console.log('Error: ', err, this.registerUserData)
+      res => {
+        this.isLoading = false;
+        console.log(res, this.registerUserData )
+      },
+      err => {
+        this.isLoading = false;
+        this.errorMessage = err.error.message;
+        console.log('Error: ', err, this.registerUserData)
+      }
     )
+  }
+
+  clearFormErrors() {
+    this.errorMessage = ''
   }
 
   backClicked() {
