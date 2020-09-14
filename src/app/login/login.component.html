@@ -5,15 +5,19 @@
     <div class='account-section'>
       <h2 class='account-title'>ACCOUNT LOGIN</h2>
       <form>
+        <p class="login-error" *ngIf="errorMessage" >Incorrect Email or password</p>
         <div class='email-container'>
           <label class='login-label'>Email</label>
-          <input [(ngModel)]="loginUserData.email"  class='login-input' type='text' name='email' />
+          <input  matInput [(ngModel)]="loginUserData.email" (ngModelChange)="clearFormErrors()"  class='login-input' type='text' name='email' />
         </div>
         <div class='email-container'>
           <label class='login-label'>Password</label>
-          <input [(ngModel)]="loginUserData.password" class='login-input' type='password' name='password'/>
+          <input matInput [(ngModel)]="loginUserData.password" (ngModelChange)="clearFormErrors()" class='login-input' type='password' name='password'/>
         </div>
-        <button (click)="loginUser()" class='login-btn'>Log in</button>
+        <button (click)="loginUser()" class='login-btn' [disabled]="!loginUserData.email || !loginUserData.password">
+          <span *ngIf="!isLoading">Log in</span>
+          <mat-spinner class="custom-spinner" diameter="25" *ngIf="isLoading"></mat-spinner>
+        </button>
       </form>
     </div>
   </div>
