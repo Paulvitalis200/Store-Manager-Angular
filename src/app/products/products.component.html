@@ -1,12 +1,18 @@
 
 <div>
     <app-navbar></app-navbar>
+    <div *ngIf="isLoading" class="sales-spinner-div">
+        <mat-spinner class="sales-spinner" diameter="150"></mat-spinner>
+    </div>
     <div class="products-container" >
         <div class="product" *ngFor="let product of products">
-            <img src="../../assets/images/placeholder.svg" alt="Placeholder" />
+            <img class="product-img" src="../../assets/images/placeholder.svg" alt="Placeholder" />
             <p>{{product.name}}</p>
-            <p>{{product.price}}</p>
+            <p>Ksh. {{product.price}}</p>
             <p>{{product.category}}</p>
         </div>
     </div> 
+    <div class='back-button'>
+        <button (click)="backClicked()" class='product-btn-back'>Back to Dashboard</button>
+    </div>
 </div>
