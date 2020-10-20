@@ -9,6 +9,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Ensure you have `node` and `npm` installed.
 Clone the repo and install all dependencies using `npm install`.
 Checkout to  the `develop`  branch.
+Go to the `package.json` file and change the start command to `ng serve`  
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 Login credentials:
@@ -18,6 +19,10 @@ Login credentials:
 This repo uses the Store Manager API as its backend
 
 [Store Manager API](https://github.com/Paulstar200/Store-Manager-API-V2)
+
+# Tests
+End to End tests have been set up using Cypress.
+To test, run `npx open cypress`
 
 # Features
 1. Store Owner can create a store attendant.
